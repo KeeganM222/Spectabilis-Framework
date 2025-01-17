@@ -1,0 +1,11 @@
+build/.vs
+reference/
+*.pdb
+*.idb
+*.obj
+*.ipdb
+*.iobj
+*.log
+*.tlog
+*.recipe
+*.ilk
