@@ -11,11 +11,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\Spectabilis-Test\Spectabilis-Test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\source\Spectabilis-Test\Spectabilis-Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

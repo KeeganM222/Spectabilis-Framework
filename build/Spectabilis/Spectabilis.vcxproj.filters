@@ -11,11 +11,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\Spectabilis\LogManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\include\Spectabilis\Spectabilis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\source\Spectabilis\LogManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\source\Spectabilis\Spectabilis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

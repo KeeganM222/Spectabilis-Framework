@@ -1,5 +1,6 @@
 build/.vs
 reference/
+x64/
 *.pdb
 *.idb
 *.obj
