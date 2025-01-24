@@ -1,0 +1,23 @@
+Configuration log file names:
+Log file name: "2025.01.24.15.37.45.sflog"
+Log file name: "Test1.sflog"
+Application is initialized
+Write function test
+Date: 2025.01.24
+Time: @15:37:45
+Logging system initialized: 1
+Log file name: "2025.01.24.15.37.45.sflog"
+Log file name: "Test1.sflog"
+Added log file name
+Failed to add duplicate log file
+Removed log file name
+Failed to remove non-existant log file name
+Updated log file names:
+Log file name: "2025.01.24.15.37.45.sflog"
+Log file name: "Test2.sflog"
+Test 1234
+2025.01.24@15:37:45: [SPECTABILIS TEST] [INFO] Hello world!
+
+C:\Users\DLLI35\Desktop\Projects\Programming Projects\Spectabilis-Framework\bin\Spectabilis-Test-Debug.exe (process 7472) exited with code 0 (0x0).
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .

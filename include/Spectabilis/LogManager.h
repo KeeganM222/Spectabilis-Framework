@@ -16,10 +16,6 @@ Purpose:	Declare application logging functions for the Spectabilis Framework.
 
 namespace Spectabilis {
 
-#define SFLOG(SOURCE, LEVEL, ...) Application::Log(), \
-	Application::Log().getDate(), Application::Log().getTime(), ": [", \
-	#SOURCE, "] [", #LEVEL, "] ", __VA_ARGS__, "\n";
-
 	// The singleton logging system manager class for Spectabilis Framework
 	// applications.
 	class LogManager {
@@ -35,18 +31,6 @@ namespace Spectabilis {
 		*/
 		void operator = (LogManager&) = delete;
 		/*
-		Get the singleton instance of the LogManager class.
-		Returns: LogManager& - The singleton instance of the LogManager class.
-		*/
-		static LogManager& GetInstance();
-		/*
-		Initialize the logging system.
-		Parameter: const std::vector<std::string>& logFileNames - The set of
-		file names to write logs to.
-		Returns: bool - Whether the logging system was initialized successfully.
-		*/
-		bool initialize(const std::vector<std::string>&);
-		/*
 		Write data to this log.
 		Parameter: const T& data - The data to write.
 		*/
@@ -58,10 +42,6 @@ namespace Spectabilis {
 				it->second << data;
 			}
 		}
-		/*
-		Free the logging system's memory.
-		*/
-		void destroy();
 		/*
 		Get the current system date as a string.
 		Returns: std::string - The current date.
@@ -96,6 +76,9 @@ namespace Spectabilis {
 		bool removeLogFileName(const std::string&);
 
 	private:
+		// Allow the Application class to access private variables and
+		// functions.
+		friend class Application;
 		// The singleton instance of the LogManager class.
 		static LogManager Instance;
 		// Whether the logging system has been initialized.
@@ -107,6 +90,22 @@ namespace Spectabilis {
 		Construct an instance of the singleton LogManager class.
 		*/
 		LogManager();
+		/*
+		Initialize the logging system.
+		Parameter: const std::vector<std::string>& logFileNames - The set of
+		file names to write logs to.
+		Returns: bool - Whether the logging system was initialized successfully.
+		*/
+		bool initialize(const std::vector<std::string>&);
+		/*
+		Free the logging system's memory.
+		*/
+		void destroy();
+		/*
+		Get the singleton instance of the LogManager class.
+		Returns: LogManager& - The singleton instance of the LogManager class.
+		*/
+		static LogManager& GetInstance();
 	};
 
 	/*
@@ -122,6 +121,10 @@ namespace Spectabilis {
 		logManager.write(data);
 		return logManager;
 	}
+
+#define SFLOG(SOURCE, LEVEL, ...) Application::Log(), \
+	Application::Log().getDate(), Application::Log().getTime(), ": [", \
+	#SOURCE, "] [", #LEVEL, "] ", __VA_ARGS__, "\n";
 
 }
 

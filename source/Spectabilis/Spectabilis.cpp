@@ -49,6 +49,10 @@ namespace Spectabilis {
 		return LogManager::GetInstance();
 	}
 
+	bool Application::IsInitialized() {
+		return Initialized;
+	}
+
 	Application::Application() {
 
 	}

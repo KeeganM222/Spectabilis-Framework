@@ -61,6 +61,7 @@ namespace Spectabilis {
 		Test whether the Spectabilis application has been initialized.
 		Returns: bool - Whether the application has been initialized.
 		*/
+		static bool IsInitialized();
 
 	private:
 		// Whether the application has been initialized.
